@@ -19,4 +19,18 @@ func main() {
 	fmt.Println(a)
 	fmt.Println("Length of a:", len(a))
 	fmt.Println("Capacity of a:", cap(a))
+
+	// Capacity of slice
+	var x []int
+	fmt.Println(x, "Length:", len(x), "Capacity:", cap(x))
+	x = append(x, 10)
+	fmt.Println(x, "Length:", len(x), "Capacity:", cap(x))
+	x = append(x, 20)
+	fmt.Println(x, "Length:", len(x), "Capacity:", cap(x))
+	x = append(x, 30)
+	fmt.Println(x, "Length:", len(x), "Capacity:", cap(x))
+	x = append(x, 40)
+	fmt.Println(x, "Length:", len(x), "Capacity:", cap(x))
+	x = append(x, 50)
+	fmt.Println(x, "Length:", len(x), "Capacity:", cap(x))
 }
