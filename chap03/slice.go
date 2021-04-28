@@ -11,4 +11,12 @@ func main() {
 	var c = []int{2, 3, 4, 5}
 	c = append(c, 1)
 	fmt.Println(c, "length:", len(c), "capacity:", cap(c))
+	d := append(a, 100, 200, 300, 400)
+	fmt.Println(d)
+	e := append(a, b...)
+	fmt.Println(e)
+	a = append(a, 60)
+	fmt.Println(a)
+	fmt.Println("Length of a:", len(a))
+	fmt.Println("Capacity of a:", cap(a))
 }
