@@ -70,5 +70,18 @@ func main() {
 	s := r[:2] // 1, 2
 	t := r[2:] // 3, 4
 	fmt.Println("r:", cap(r), "s:", cap(s), "t:", cap(t))
+	s = append(s, 30, 40, 50) // 1, 2, 30, 40, 50
+	r = append(r, 60)         // 1, 2, 60, 40, 50
+	t = append(t, 70)         // 30, 40, 70, 60
+	fmt.Println("r:", r)
+	fmt.Println("s:", s)
+	fmt.Println("t:", t)
+	fmt.Println("r after modifications:", r)
 
+	u := r[:2:2]
+	fmt.Println("u from r:", u)
+	v := r[2:4:4]
+	fmt.Println("v from r:", v)
+	u = append(u, 3, 4, 5)
+	fmt.Println("u:", u, "cap of u:", cap(u), "cap of r:", cap(r))
 }
