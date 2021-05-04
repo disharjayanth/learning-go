@@ -11,7 +11,7 @@ func main() {
 	}
 	fmt.Println("x value outside if statment:", x)
 
-	fmt.Println("----------------------------------------------------------")
+	// fmt.Println("----------------------------------------------------------")
 
 	a := 10
 	if a > 5 {
@@ -20,10 +20,10 @@ func main() {
 	}
 	fmt.Println(a)
 
-	fmt.Println("*********************************************")
+	// fmt.Println("*********************************************")
 
-	s := 10
-	fmt.Println(s)
-	fmt = "oops"
-	fmt.Println(fmt)
+	// x := 10
+	// fmt.Println(x)
+	// fmt := "oops"
+	// fmt.Println(fmt)
 }
