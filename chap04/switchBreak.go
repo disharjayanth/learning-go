@@ -17,4 +17,6 @@ loop:
 			fmt.Println(i, "is boring")
 		}
 	}
+
+	fmt.Println("Exited.")
 }
