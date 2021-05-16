@@ -38,4 +38,38 @@ func main() {
 	fmt.Println("somePerson:", somePerson, "*somePerson:", *somePerson)
 	someString := new(string)
 	fmt.Println("someString:", someString, "*someString:", *someString)
+
+	type foo struct {
+		firstName string
+		lastName  string
+	}
+
+	r := &foo{}
+	var s string
+	t := &s
+
+	fmt.Printf("Type of foo struct: %T\nType of s string: %T\n", r, t)
+
+	type person struct {
+		FirstName  string
+		MiddleName *string
+		LastName   string
+	}
+
+	p := &person{
+		FirstName:  "Pat",
+		MiddleName: stringPointer("Perry"),
+		LastName:   "Peterson",
+	}
+
+	fmt.Printf("The type of p person: %T and with value %v\n", p, p)
+
+	var someStringPointer *string
+	someString1 := "Hello world!"
+	someStringPointer = &someString1
+	fmt.Printf("Type of someStringPointer: %T and with value %v\n", someStringPointer, someString1)
+}
+
+func stringPointer(s string) *string {
+	return &s
 }
