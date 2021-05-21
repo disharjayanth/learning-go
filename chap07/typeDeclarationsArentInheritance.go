@@ -20,4 +20,21 @@ func main() {
 	hs = HighScore(s)
 	s = Score(i)
 	fmt.Printf("%v: %T\n%v: %T\n", s, s, hs, hs)
+
+	p1 := Person{
+		FirstName: "S",
+		LastName:  "B",
+		Age:       20,
+		isLicense: true,
+	}
+
+	fmt.Println(p1)
+
+	e1 := Employee{
+		FirstName: "R",
+		LastName:  "T",
+		Age:       22,
+		isLicense: false,
+	}
+	fmt.Println(e1)
 }
