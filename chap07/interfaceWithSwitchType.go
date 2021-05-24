@@ -43,6 +43,13 @@ func main() {
 	i = someStruct
 	doThings(i)
 
+	file, err := os.Open("interfaceWithSwitchType.go")
+	defer file.Close()
+	if err != nil {
+		fmt.Println("Error:", err)
+	}
+	doThings(file)
+
 	var i7 os.File
 	i = i7
 	doThings(i)
@@ -62,7 +69,7 @@ func doThings(i interface{}) {
 		fmt.Printf("%T\n", j)
 	case io.Reader:
 		// j is type of io.Reader
-		fmt.Printf("%T\n", j)
+		fmt.Printf("io.Reader type: %T\n", j)
 	case string:
 		// j is type of string
 		fmt.Printf("%T\n", j)
