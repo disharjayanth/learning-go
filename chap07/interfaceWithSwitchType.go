@@ -48,7 +48,8 @@ func main() {
 	if err != nil {
 		fmt.Println("Error:", err)
 	}
-	doThings(file)
+	i = file
+	doThings(i)
 
 	var i7 os.File
 	i = i7
