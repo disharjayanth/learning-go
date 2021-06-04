@@ -1,6 +1,11 @@
+github.com/google/go-cmp v0.5.2 h1:X2ev0eStA3AbceY54o37/0PQ/UWqKEiiO2dKL5OPaFM=
 github.com/google/go-cmp v0.5.2/go.mod h1:v8dTdLbMG2kIc/vJvl+f65V22dbkXbowE6jgT/gNBxE=
+github.com/learning-go-book/circular_dependency_example v0.0.0-20200921045049-d94ffc58ef8a h1:D8di8sHQ9FbSjgnSmzQNO14l4tfDIAf1pOhkIyrKmhs=
+github.com/learning-go-book/circular_dependency_example v0.0.0-20200921045049-d94ffc58ef8a/go.mod h1:nGP8LZ0mIJ9J06QSL2+Enxj6JcfrfPHF14TzgAp6C04=
 github.com/learning-go-book/formatter v0.0.0-20200921021027-5abc380940ae h1:TRWDqrPLdqr3L6T0reL3A7/ArQ194nVFY7frsixLYdQ=
 github.com/learning-go-book/formatter v0.0.0-20200921021027-5abc380940ae/go.mod h1:YSLNw1QDbIcM0EvYO9bUmuMrIPv1NNCn8KxYKBj5ZE8=
+github.com/learning-go-book/simpletax/v2 v2.0.0 h1:cZURCo1tEqdw/cJyggd5ZShbAdassAMOguy3HEmdeNc=
+github.com/learning-go-book/simpletax/v2 v2.0.0/go.mod h1:DVMa7zPtIFGmAAwd6XOTyy8ElwQfljoaLkYGAkFj75o=
 github.com/shopspring/decimal v1.2.0 h1:abSATXmQEYyShuxI4/vyW3tV1MrKAJzCZ/0zLUXYbsQ=
 github.com/shopspring/decimal v1.2.0/go.mod h1:DKyhrW/HYNuLGql+MJL6WCR6knT2jwCFRcu2hWCYk4o=
 golang.org/x/xerrors v0.0.0-20191204190536-9bdfabe68543/go.mod h1:I/5z698sn9Ka8TeJc9MKroUUfqBBauWjQqLJ2OPfmY0=
