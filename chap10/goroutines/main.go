@@ -39,4 +39,5 @@ func main() {
 	go readFromOutChannel(out, done)
 	fmt.Println("waiting")
 	<-done
+	fmt.Println("Exited.")
 }
