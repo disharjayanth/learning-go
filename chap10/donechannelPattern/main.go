@@ -22,6 +22,7 @@ func searchData(s string, searchers []func(string, int) []string) []string {
 			select {
 			case result <- searcher(s, index):
 			case <-done:
+				return
 			}
 		}(searcher, index)
 	}
