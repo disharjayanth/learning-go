@@ -14,18 +14,18 @@ func checkError(err error) {
 }
 
 func buildGZipReader(filename string) (*gzip.Reader, func(), error) {
-	file, err := os.Open(filename)
-	fmt.Println("file:", file)
+	f, err := os.Open(filename)
+	fmt.Println("file:", f)
 	if err != nil {
 		return nil, nil, err
 	}
-	gzipReader, err := gzip.NewReader(file)
+	gzipReader, err := gzip.NewReader(f)
 	fmt.Println("gzipReader:", gzipReader, "Error:", err)
 	if err != nil {
 		return nil, nil, err
 	}
 	return gzipReader, func() {
-		file.Close()
+		f.Close()
 		gzipReader.Close()
 	}, nil
 }
