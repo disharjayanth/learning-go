@@ -21,8 +21,8 @@ func guidFromContext(ctx context.Context) (string, bool) {
 	return guid, ok
 }
 
-func Middleware(h http.Handler) http.Handler {
-	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+func Middleware(h http.HandlerFunc) http.HandlerFunc {
+	return func(w http.ResponseWriter, r *http.Request) {
 		ctx := r.Context()
 		if guid := r.Header.Get("X-GUID"); guid != "" {
 			ctx = contextWithGUID(ctx, guid)
@@ -31,7 +31,7 @@ func Middleware(h http.Handler) http.Handler {
 		}
 		r = r.WithContext(ctx)
 		h.ServeHTTP(w, r)
-	})
+	}
 }
 
 type Logger struct{}

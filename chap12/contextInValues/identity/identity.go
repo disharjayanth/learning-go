@@ -26,8 +26,8 @@ func extractUser(r *http.Request) (string, error) {
 	return userCookie.Value, nil
 }
 
-func Middleware(h http.Handler) http.Handler {
-	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+func Middleware(h http.HandlerFunc) http.HandlerFunc {
+	return func(w http.ResponseWriter, r *http.Request) {
 		user, err := extractUser(r)
 		if err != nil {
 			w.WriteHeader(http.StatusUnauthorized)
@@ -37,5 +37,5 @@ func Middleware(h http.Handler) http.Handler {
 		ctx = ContextWithUser(ctx, user)
 		r = r.WithContext(ctx)
 		h.ServeHTTP(w, r)
-	})
+	}
 }
