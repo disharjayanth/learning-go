@@ -17,6 +17,9 @@ func TestDoMath(t *testing.T) {
 		{"subtraction", 2, 2, "-", 0, ""},
 		{"multiplication", 2, 2, "*", 4, ""},
 		{"bad_division", 2, 0, "/", 0, "division by zero"},
+		{"bad_operator", 2, 2, "^", 0, "unknown operator: ^"},
+		{"division", 2, 2, "/", 1, ""},
+		{"another_multi", 2, 2, "*", 4, ""},
 	}
 
 	for _, d := range data {
